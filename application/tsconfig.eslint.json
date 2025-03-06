@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json", // extend the root tsconfig if needed
+  "include": [
+    "src/**/*",
+    "next.config.ts",
+    "tailwind.config.ts",
+    "next-env.d.ts"
+  ]
+}
