@@ -5,7 +5,7 @@ import { DisneylandResort } from "@/lib/actions/DisneylandResort"
  * Create and display a message string containing the Disneyland Resort data.
  * @returns The message string.
  */
-export default async function MessageString() {
+export default async function ParkRetrival() {
     const DLR: DisneylandResort = new DisneylandResort();
     let message: string = "Waiting...";
     await DLR.setDisneyland();

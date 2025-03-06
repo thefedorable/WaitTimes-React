@@ -1,4 +1,4 @@
-import MessageString from "./MessageString";
+import ParkRetrival from "../components/ParkRetrival";
 
 /**
  * The home page for the app.
@@ -7,7 +7,7 @@ import MessageString from "./MessageString";
 export default function Home() {
   return (
     <h1 className="text-3xl font-figtree justify-center">
-      <MessageString />
+      <ParkRetrival />
     </h1>
   )
 }
