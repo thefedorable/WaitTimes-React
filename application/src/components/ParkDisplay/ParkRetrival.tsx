@@ -1,6 +1,7 @@
 import { Park } from "@/lib/actions/Park";
 import { DisneylandResort } from "@/lib/actions/DisneylandResort"
-//import { Land } from "@/lib/actions/Land";
+import { Land } from "@/lib/actions/Land";
+import LandCard from "./LandCard";
 
 /**
  * Create and display a message string containing the Disneyland Resort data.
@@ -12,17 +13,21 @@ export default async function ParkRetrival() {
     await DLR.setDisneyland();
     const Disneyland: Park = DLR.getDisneyland();
     if (Disneyland) {
-        message = Disneyland.toString();
+        const lands: Land[] = Disneyland.getLands();
+
+        return (
+            <div>
+                <LandCard land={lands[0]}/>
+            </div>
+        );
     } else {
         message = "Failed to fetch Disneyland data.";
+
+        return (
+            <div>
+                <p>{message}</p>
+            </div>
+        );
     }
-
-    //const lands: Land[] = Disneyland.getLands();
-
-    return (
-        <div>
-            <p>{message}</p>
-        </div>
-    );
 
 }
