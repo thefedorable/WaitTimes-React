@@ -1,4 +1,5 @@
-import ParkRetrival from "../components/ParkRetrival";
+import ParkRetrival from "../components/ParkDisplay/ParkRetrival";
+import LandCard from "@/components/ParkDisplay/LandCard";
 
 /**
  * The home page for the app.
@@ -6,8 +7,9 @@ import ParkRetrival from "../components/ParkRetrival";
  */
 export default function Home() {
   return (
-    <h1 className="text-3xl font-figtree justify-center">
+    <div className="text-3xl font-figtree flex flex-col items-center">
       <ParkRetrival />
-    </h1>
+      <LandCard />
+    </div>
   )
 }
