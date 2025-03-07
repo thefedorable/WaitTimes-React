@@ -17,15 +17,19 @@ interface LandProps {
 */
 export default function LandCard({ land }: LandProps) {
     return (
-        <Card className="w-full max-w-[500px] mx-auto flex flex-row overflow-hidden">       
-          <div className="w-full">
-            <CardHeader>
-              <CardTitle>{land.getName()}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <RideCard ride={land.getRides()[1]}/>
-            </CardContent>
-          </div>
-        </Card>
+        <div className = "p-2">
+            <Card className="p-2w-full max-w-[500px] mx-auto flex flex-row overflow-hidden">       
+            <div className="w-full">
+                <CardHeader>
+                <CardTitle>{land.getName()}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    {land.getRides().map((ride, index) => (
+                        <RideCard key={index} ride={ride} />
+                    ))}
+                </CardContent>
+            </div>
+            </Card>
+        </div>
     );
 }

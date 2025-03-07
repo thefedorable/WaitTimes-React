@@ -16,8 +16,10 @@ export default async function ParkRetrival() {
         const lands: Land[] = Disneyland.getLands();
 
         return (
-            <div>
-                <LandCard land={lands[0]}/>
+            <div className="p-4">
+                {lands.map((land, index) => (
+                    <LandCard key={index} land={land} />
+                ))}
             </div>
         );
     } else {
