@@ -11,12 +11,13 @@ import { ellipsis } from "@/lib/utils";
   
   interface RideProps {
       ride: Ride;
+      landID: number;
     }
   /**
    * Component for displaying the ride info with an image.
    * @returns JSX for the ride display.
    */
-  export default function RideCard({ ride }: RideProps) {
+  export default function RideCard({ ride, landID }: RideProps) {
 
     /**
      * Get the ride time.
@@ -33,6 +34,15 @@ import { ellipsis } from "@/lib/utils";
         return "Closed";
       }
     }
+
+    /**
+   * Get image for the ride.
+   * @returns The image path for the ride.
+   */
+    const getRideImage = (id: number): string => {
+      return `/ParksIcons/Disneyland/${landID}/${id}.png`;
+    }
+
     return (
       <div className="flex flex-row justify-center w-full p-2">
         <Card className="w-full max-w-[325px] flex flex-row overflow-hidden">
@@ -40,7 +50,7 @@ import { ellipsis } from "@/lib/utils";
           <div className="w-1/4 sm:w-1/3 relative">
             <div className="aspect-w-16 aspect-h-9 h-full">
               <Image 
-                src={Big.src}
+                src={getRideImage(ride.getId())}
                 alt={ride.getName()} 
                 width={160}
                 height={90}

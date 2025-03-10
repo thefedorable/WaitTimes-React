@@ -25,7 +25,7 @@ export default function LandCard({ land }: LandProps) {
                 </CardHeader>
                 <CardContent>
                     {land.getRides().map((ride, index) => (
-                        <RideCard key={index} ride={ride} />
+                        <RideCard key={index} ride={ride} landID={land.getID()} />
                     ))}
                 </CardContent>
             </div>
