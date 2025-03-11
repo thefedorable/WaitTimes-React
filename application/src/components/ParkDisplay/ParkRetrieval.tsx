@@ -7,7 +7,7 @@ import LandCard from "./LandCard";
  * Create and display a message string containing the Disneyland Resort data.
  * @returns The message string.
  */
-export default async function ParkRetrival() {
+export default async function ParkRetrieval() {
     const DLR: DisneylandResort = new DisneylandResort();
     let message: string = "Waiting...";
     await DLR.setDisneyland();

@@ -1,4 +1,4 @@
-import ParkRetrival from "../components/ParkDisplay/ParkRetrival";
+import ParkRetrieval from "../components/ParkDisplay/ParkRetrieval";
 
 /**
  * The home page for the app.
@@ -7,7 +7,7 @@ import ParkRetrival from "../components/ParkDisplay/ParkRetrival";
 export default function Home() {
   return (
     <div className="text-3xl font-figtree flex flex-col items-center">
-      <ParkRetrival />
+      <ParkRetrieval />
     </div>
   )
 }
