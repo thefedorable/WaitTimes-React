@@ -60,12 +60,16 @@ export default function RideCard({ ride, landID }: RideProps) {
         
         {/* Card content on the right side */}
         <div className="w-3/4 sm:w-2/3">
-          <CardHeader className="p-2">
-            <CardTitle className="text-xl">{ellipsis(ride.getName(), 40)}</CardTitle>
+          <CardHeader className="p-1">
+            <CardTitle className="text-base">
+              {ellipsis(ride.getName(), 45)}
+            </CardTitle>
+            <CardContent className="p-1">
+              <p className="text-sm">
+                {rideTime()}
+              </p>
+            </CardContent>
           </CardHeader>
-          <CardContent className="p-1">
-            <p className="text-2xl">{rideTime()}</p>
-          </CardContent>
         </div>
       </Card>
     </div>

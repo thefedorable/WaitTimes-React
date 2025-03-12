@@ -21,7 +21,7 @@ export default function LandCard({ land }: LandProps) {
             <Card className="p-2w-full max-w-[500px] mx-auto flex flex-row overflow-hidden">       
             <div className="w-full">
                 <CardHeader>
-                <CardTitle>{land.getName()}</CardTitle>
+                <CardTitle className="text-2xl font-bold font-figtree">{land.getName()}</CardTitle>
                 </CardHeader>
                 <CardContent>
                     {land.getRides().map((ride, index) => (
