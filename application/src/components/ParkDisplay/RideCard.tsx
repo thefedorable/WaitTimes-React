@@ -11,12 +11,13 @@ import { ellipsis } from "@/lib/utils";
 interface RideProps {
     ride: Ride;
     landID: number;
+    parkID: number;
   }
 /**
  * Component for displaying the ride info with an image.
  * @returns JSX for the ride display.
  */
-export default function RideCard({ ride, landID }: RideProps) {
+export default function RideCard({ ride, landID, parkID }: RideProps) {
 
   /**
    * Get the ride time.
@@ -39,7 +40,7 @@ export default function RideCard({ ride, landID }: RideProps) {
  * @returns The image path for the ride.
  */
   const getRideImage = (id: number): string => {
-    return `/ParksIcons/Disneyland/${landID}/${id}.png`;
+    return `/ParksIcons/${parkID}/${landID}/${id}.png`;
   }
 
   return (

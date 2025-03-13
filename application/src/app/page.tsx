@@ -7,7 +7,7 @@ import ParkRetrieval from "../components/ParkDisplay/ParkRetrieval";
 export default function Home() {
   return (
     <div className="text-3xl font-figtree flex flex-col items-center">
-      <ParkRetrieval />
+      <ParkRetrieval parkID={16} />
     </div>
   )
 }

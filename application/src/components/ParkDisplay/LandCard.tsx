@@ -9,13 +9,14 @@ import { Land } from "@/lib/actions/Land";
 
 interface LandProps {
     land: Land;
+    parkID: number;
   }
 
 /**
 * Component for displaying the land info with each ride.
 * @returns JSX for the land display.
 */
-export default function LandCard({ land }: LandProps) {
+export default function LandCard({ land, parkID }: LandProps) {
     return (
         <div className = "p-2">
             <Card className="p-2w-full max-w-[500px] mx-auto flex flex-row overflow-hidden">       
@@ -25,7 +26,7 @@ export default function LandCard({ land }: LandProps) {
                 </CardHeader>
                 <CardContent>
                     {land.getRides().map((ride, index) => (
-                        <RideCard key={index} ride={ride} landID={land.getID()} />
+                        <RideCard key={index} ride={ride} landID={land.getID()} parkID={parkID} />
                     ))}
                 </CardContent>
             </div>
