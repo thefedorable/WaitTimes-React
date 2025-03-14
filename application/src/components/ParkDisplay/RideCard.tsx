@@ -18,7 +18,6 @@ interface RideProps {
  * @returns JSX for the ride display.
  */
 export default function RideCard({ ride, landID, parkID }: RideProps) {
-
   /**
    * Get the ride time.
    * @returns The ride time as a string.
@@ -52,8 +51,8 @@ export default function RideCard({ ride, landID, parkID }: RideProps) {
             <Image 
               src={getRideImage(ride.getId())}
               alt={ride.getName()} 
-              width={160}
-              height={90}
+              width={1000}
+              height={1000}
               className="object-cover absolute inset-0 w-full h-full"
             />
           </div>
