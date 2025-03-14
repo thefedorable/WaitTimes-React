@@ -1,5 +1,5 @@
-import { Park } from "@/lib/actions/Park";
-import { Land } from "@/lib/actions/Land";
+import { Park } from "@/lib/objects/Park";
+import { Land } from "@/lib/objects/Land";
 import LandCard from "./LandCard";
 import { JsonTools } from "@/lib/actions/JsonTools";
 interface ParkProps {

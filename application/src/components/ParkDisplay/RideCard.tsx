@@ -5,7 +5,7 @@ import {
     CardTitle,
   } from "@/components/ui/card"
 import Image from "next/image";
-import { Ride } from "@/lib/actions/Ride";
+import { Ride } from "@/lib/objects/Ride";
 import { ellipsis } from "@/lib/utils";
 
 interface RideProps {

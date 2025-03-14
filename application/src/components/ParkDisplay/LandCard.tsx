@@ -5,7 +5,7 @@ import {
     CardTitle,
   } from "@/components/ui/card"
 import RideCard from "./RideCard";
-import { Land } from "@/lib/actions/Land";
+import { Land } from "@/lib/objects/Land";
 
 interface LandProps {
     land: Land;
@@ -19,7 +19,7 @@ interface LandProps {
 export default function LandCard({ land, parkID }: LandProps) {
     return (
         <div className = "p-2">
-            <Card className="p-2w-full max-w-[500px] mx-auto flex flex-row overflow-hidden">       
+            <Card className="p-2w-full max-w-[500px] mx-auto flex flex-row overflow-hidden bg-accent">       
             <div className="w-full">
                 <CardHeader>
                 <CardTitle className="text-2xl font-bold font-figtree">{land.getName()}</CardTitle>

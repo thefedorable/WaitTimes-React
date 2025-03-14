@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Park } from "./Park";
-import { Land } from "./Land";
-import {Ride} from "./Ride";
+import { Park } from "../objects/Park";
+import { Land } from "../objects/Land";
+import {Ride} from "../objects/Ride";
 
 /**
  * Class to handle JSON data fetching and deserialization.
