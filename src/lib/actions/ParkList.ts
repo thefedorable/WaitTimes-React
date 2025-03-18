@@ -23,6 +23,11 @@ export default function getParks(){
             id: 6,
             name: "Magic Kingdom",
             icon: `/ParksIcons/6/MagicKingdom.png`,
-        }
+        },
+        {
+            id: 65,
+            name: "Universal Studios Orlando",
+            icon: `/ParksIcons/65/UniversalOrlando.png`,
+        },
     ];
 }
