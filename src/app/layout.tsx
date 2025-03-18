@@ -15,7 +15,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "RopeSwing",
+  title: "Wait Times",
   description: "Create Cool Campaigns!",
 };
 
