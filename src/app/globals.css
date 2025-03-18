@@ -70,3 +70,7 @@ body {
     @apply bg-ring text-foreground;
   }
 }
+
+nextjs-portal {
+  display: none;
+}
