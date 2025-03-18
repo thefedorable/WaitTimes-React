@@ -11,9 +11,6 @@ Tutorial for deployment: https://www.sammeechward.com/deploying-full-stack-js-to
 
 Installing rsync: https://scicomp.aalto.fi/scicomp/rsynconwindows/
 
-Upload to server: rsync -avz --exclude 'node_modules' --exclude '.next' --exclude '.git' --exclude '.env' \
--e "ssh -i ~/.desktop/your-key.pem" \
-. ubuntu@ip-address:~/app
-
 Restart service after upload: "npm run build" and then "sudo systemctl restart myapp.service"
 
+Edit caddy proxy server: "sudo vim /etc/caddy/Caddyfile" and then "sudo systemctl restart caddy"
