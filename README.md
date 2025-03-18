@@ -11,6 +11,8 @@ Tutorial for deployment: https://www.sammeechward.com/deploying-full-stack-js-to
 
 Installing rsync: https://scicomp.aalto.fi/scicomp/rsynconwindows/
 
+Stop service if needed: "sudo systemctl stop myapp.service"
+
 Restart service after upload: "npm run build" and then "sudo systemctl restart myapp.service"
 
 Edit caddy proxy server: "sudo vim /etc/caddy/Caddyfile" and then "sudo systemctl restart caddy"
