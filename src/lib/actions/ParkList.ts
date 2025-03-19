@@ -20,6 +20,11 @@ export default function getParks(){
             icon: `/ParksIcons/66/UniversalHollywood.png`,
         },
         {
+            id: 61,
+            name: "Knott's Berry Farm",
+            icon:`/ParksIcons/61/KnottsBerryFarm.png`
+        },
+        {
             id: 6,
             name: "Magic Kingdom",
             icon: `/ParksIcons/6/MagicKingdom.png`,

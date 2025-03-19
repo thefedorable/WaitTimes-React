@@ -2,6 +2,7 @@ import { Park } from "@/lib/objects/Park";
 import { Land } from "@/lib/objects/Land";
 import LandCard from "./LandCard";
 import { JsonTools } from "@/lib/actions/JsonTools";
+import { KnottsCleanUp } from "@/lib/actions/DataCleanUp";
 interface ParkProps {
     parkID: number;
   }
@@ -32,7 +33,10 @@ export default async function ParkRetrieval({ parkID }: ParkProps) {
     await setPark(parkID);
     let message: string = "Waiting...";
     if (current) {
-        const lands: Land[] = current.getLands();
+        let lands: Land[] = current.getLands();
+        if (parkID == 61) {
+            lands = KnottsCleanUp(lands);
+        }
 
         return (
             <div className="p-4">
