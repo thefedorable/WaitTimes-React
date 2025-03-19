@@ -30,6 +30,11 @@ export default function getParks(){
             icon: `/ParksIcons/6/MagicKingdom.png`,
         },
         {
+            id: 5,
+            name: "Epcot",
+            icon: `/ParksIcons/5/Epcot.png`,
+        },
+        {
             id: 65,
             name: "Universal Studios Orlando",
             icon: `/ParksIcons/65/UniversalOrlando.png`,

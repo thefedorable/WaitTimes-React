@@ -2,7 +2,7 @@ import { Park } from "@/lib/objects/Park";
 import { Land } from "@/lib/objects/Land";
 import LandCard from "./LandCard";
 import { JsonTools } from "@/lib/actions/JsonTools";
-import { KnottsCleanUp } from "@/lib/actions/DataCleanUp";
+import { EpcotCleanUp, KnottsCleanUp } from "@/lib/actions/DataCleanUp";
 interface ParkProps {
     parkID: number;
   }
@@ -36,6 +36,10 @@ export default async function ParkRetrieval({ parkID }: ParkProps) {
         let lands: Land[] = current.getLands();
         if (parkID == 61) {
             lands = KnottsCleanUp(lands);
+        }
+
+        if (parkID == 5) {
+            lands = EpcotCleanUp(lands);
         }
 
         return (
