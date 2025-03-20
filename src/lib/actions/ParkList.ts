@@ -49,5 +49,10 @@ export default function getParks(){
             name: "Universal Studios Orlando",
             icon: `/ParksIcons/65/UniversalOrlando.png`,
         },
+        {
+            id: 64,
+            name: "Islands of Adventure",
+            icon: `/ParksIcons/64/IslandsOfAdventure.png`,
+        },
     ];
 }
