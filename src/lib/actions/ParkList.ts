@@ -40,6 +40,11 @@ export default function getParks(){
             icon: `/ParksIcons/7/HollywoodStudios.png`,
         },
         {
+            id: 8,
+            name: "Disney's Animal Kingdom",
+            icon: `/ParksIcons/8/DisneysAnimalKingdom.png`,
+        },
+        {
             id: 65,
             name: "Universal Studios Orlando",
             icon: `/ParksIcons/65/UniversalOrlando.png`,
