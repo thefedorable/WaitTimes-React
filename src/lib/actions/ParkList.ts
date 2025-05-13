@@ -54,5 +54,10 @@ export default function getParks(){
             name: "Islands of Adventure",
             icon: `/ParksIcons/64/IslandsOfAdventure.png`,
         },
+        {
+            id: 334,
+            name: "Epic Universe",
+            icon: `/ParksIcons/334/EpicUniverse.png`,
+        },
     ];
 }
