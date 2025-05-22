@@ -2,7 +2,7 @@ import { Park } from "@/lib/objects/Park";
 import { Land } from "@/lib/objects/Land";
 import LandCard from "./LandCard";
 import { JsonTools } from "@/lib/actions/JsonTools";
-import { EpcotCleanUp, KnottsCleanUp } from "@/lib/actions/DataCleanUp";
+import { EpcotCleanUp, KnottsCleanUp, UniversalCleanUp, UniversalOrlandoCleanUp } from "@/lib/actions/DataCleanUp";
 interface ParkProps {
     parkID: number;
   }
@@ -40,6 +40,14 @@ export default async function ParkRetrieval({ parkID }: ParkProps) {
 
         if (parkID == 5) {
             lands = EpcotCleanUp(lands);
+        }
+
+        if (parkID == 334 || parkID == 64 || parkID == 65) {
+            lands = UniversalCleanUp(lands);
+        }
+
+        if (parkID == 65) {
+            lands = UniversalOrlandoCleanUp(lands);
         }
 
         return (
